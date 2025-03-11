@@ -2,8 +2,7 @@ import whisper
 import sys
 import os
 
-output = input("Save as? ")
-def transcribe_audio(audio_path, output_path=output, model_size="small"):
+def transcribe_audio(audio_path, output_path="output.txt", model_size="small"):
 	model = whisper.load_model(model_size)
 
 	print(f"Transcribing {audio_path}...")
