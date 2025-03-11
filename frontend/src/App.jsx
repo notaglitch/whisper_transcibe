@@ -1,13 +1,19 @@
-import React from 'react'
-import FileUpload from './components/FileUpload'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import FileUpload from "./components/FileUpload";
+import About from "./components/About";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      APP
-      <FileUpload />
-    </div>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<FileUpload />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
